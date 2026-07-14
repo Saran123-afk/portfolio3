@@ -1,0 +1,366 @@
+/* =======================
+   RESET
+======================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+
+nav{
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:1200px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 40px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:50px;
+
+    z-index:999;
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#00d9ff;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+transition:.3s;
+
+font-size:17px;
+
+}
+
+nav a:hover{
+
+color:#00d9ff;
+
+}
+
+/* =======================
+ HERO
+======================= */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-around;
+
+padding:120px 10%;
+
+}
+
+.hero-text{
+
+max-width:550px;
+
+}
+
+.hero-text h1{
+
+font-size:58px;
+
+margin-bottom:15px;
+
+}
+
+.hero-text h2{
+
+font-size:32px;
+
+color:#00d9ff;
+
+margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+font-size:20px;
+
+line-height:35px;
+
+color:#d4d4d4;
+
+margin-bottom:40px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:15px 40px;
+
+background:#00d9ff;
+
+color:black;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 0 30px #00d9ff;
+
+}
+
+/* =======================
+รูปโปรไฟล์
+======================= */
+
+.hero-img img{
+
+width:370px;
+
+height:370px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid #00d9ff;
+
+box-shadow:
+
+0 0 30px #00d9ff,
+
+0 0 70px rgba(0,217,255,.5);
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* =======================
+SECTION
+======================= */
+
+section{
+
+min-height:100vh;
+
+padding:140px 10%;
+
+}
+
+section h1{
+
+font-size:50px;
+
+margin-bottom:40px;
+
+text-align:center;
+
+}
+
+/* =======================
+Scrollbar
+======================= */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#00d9ff;
+
+border-radius:50px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#1d1d1d;
+
+}
+
+/* =======================
+Background Glow
+======================= */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:600px;
+
+height:600px;
+
+background:#00d9ff33;
+
+filter:blur(180px);
+
+top:-200px;
+
+left:-200px;
+
+z-index:-1;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:500px;
+
+height:500px;
+
+background:#006eff33;
+
+filter:blur(180px);
+
+bottom:-150px;
+
+right:-150px;
+
+z-index:-1;
+
+}
+
+/* =======================
+Responsive
+======================= */
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+}
+
+.hero-img img{
+
+width:270px;
+
+height:270px;
+
+margin-bottom:40px;
+
+}
+
+.hero-text h1{
+
+font-size:42px;
+
+}
+
+.hero-text h2{
+
+font-size:26px;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+
+}
+
+nav{
+
+padding:15px 20px;
+
+}
+
+nav ul{
+
+gap:15px;
+
+font-size:14px;
+
+}
+
+}
