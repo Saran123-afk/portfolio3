@@ -364,3 +364,7 @@ font-size:14px;
 }
 
 }
+nav a.active{
+    color:#00d9ff;
+    font-weight:bold;
+}
